@@ -6,14 +6,18 @@ public class Quicksort {
 
     //sample array
     public static void main(String[] args) {
+        
         int[] a = {5,4,10,7,6,2,44,3,6,1,9,8,11,8,53,66,9};
+        System.out.print("The array before sorting: ");
+        System.out.println(Arrays.toString(a));
+        System.out.print("The array after sorting: ");
         System.out.println(Arrays.toString(QuickSort(a, 0, 16)));
         
     }
     
     public static int[] QuickSort(int[] array, int p, int r){
         if(p < r){
-            int q = Partition(array, p, r);System.out.println(q);
+            int q = Partition(array, p, r);
             QuickSort(array, p, q-1);
             QuickSort(array, q , r);
             
